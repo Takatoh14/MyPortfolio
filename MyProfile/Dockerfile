@@ -1,13 +1,22 @@
-FROM node:18
+# 軽量かつ安定した Node イメージを使用
+FROM node:20-slim
 
+# 作業ディレクトリを作成
 WORKDIR /app
 
-# 依存関係インストール
+# SCSSコンパイルに必要なビルドツールをインストール
+RUN apt-get update && apt-get install -y \
+  python3 \
+  make \
+  g++ \
+  && rm -rf /var/lib/apt/lists/*
+
+# 依存関係のインストール
 COPY package.json package-lock.json* ./
 RUN npm install
 
-# 残りをコピー
+# アプリケーションのソースコードをコピー
 COPY . .
 
-# Viteサーバ起動
+# 開発サーバを起動
 CMD ["npm", "run", "dev"]

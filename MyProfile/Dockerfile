@@ -17,6 +17,6 @@ RUN npm install
 
 # アプリケーションのソースコードをコピー
 COPY . .
-
+EXPOSE 5173
 # 開発サーバを起動
 CMD ["npm", "run", "dev"]

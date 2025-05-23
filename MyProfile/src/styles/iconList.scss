@@ -1,0 +1,54 @@
+// 変数ファイル './variable' をインポート（名前空間なしで全ての変数を使用可能に）
+@use './variable' as *;
+
+// スライダーの外枠ラッパー
+.icon-slider-wrapper {
+  overflow: hidden;     // 中身がはみ出さないように隠す
+  width: 100%;          // 横幅いっぱいに広げる
+  position: relative;   // 子要素の絶対配置の基準にするため
+  
+  // 実際にスライドするアイコン群のコンテナ
+  .icon-slider {
+    display: flex;        // 横並びにする
+    gap: 30px;            // アイコン間の隙間を30pxに設定
+    animation: slide 30s linear infinite; // slideアニメーションを60秒間で繰り返し再生
+    will-change: transform; // パフォーマンス最適化のためtransformが変わることをブラウザに通知
+    width: fit-content;   // 内容の幅に合わせる
+
+    // profileIconクラスのアイコン個別スタイル
+    .profileIcon {
+      width: 30px;       // 幅を30pxに固定
+      flex-shrink: 0;    // アイコンが縮まないようにする
+    }
+
+    // slideアニメーションの定義
+    @keyframes slide {
+      0% {
+        transform: translateX(0);    // 初期位置はそのまま
+      }
+      100% {
+        transform: translateX(calc(-50% - 15px)); /* gapが30pxなので半分の15pxをマイナス方向に追加 */
+        // これにより、2倍に複製されたアイコンの半分分移動し、
+        // ループで連続スライドしているように見せる
+      }
+    }
+  }
+}
+
+.snsIcons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+  .snsIcon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; /* スムーズな動きを付ける */
+
+    &:hover {
+      transform: translateY(-5px); /* ホバー時に上に5px移動 */
+      cursor: pointer; /* ホバー時にカーソルを変える */
+    }
+  }
+}
+

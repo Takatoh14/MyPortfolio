@@ -1,37 +1,34 @@
-import "../../src/styles/main.scss";
-import "../../src/styles/_About.scss";
-import "../../src/styles/_responsive.scss";
+import "../styles/common.scss";
+import "../styles/about.scss";
 
-import { SnsIcons } from "./IconImages";
-import profileImg from "../../public/images/icon01.png";
+import { Profile } from "./IconList";
 
-const About: React.FC = () => {
+const About = () => {
   return (
-    <section className="about">
-      <h2 id="About" className="scroll-offset">
-        About
-      </h2>
-      <div className="about-content">
-        <img src={profileImg} alt="Profile" className="profile-image" />
-        <div className="about-text">
-          <p>テキストテキストテキストテキストテキストテキストテキスト</p>
-          <p>テキストテキストテキストテキストテキストテキストテキスト</p>
-          <p>テキストテキストテキストテキストテキストテキストテキスト</p>
+    <div id="About" className="about">
+      <div className="inner">
+        <h2>About</h2>
+        <div className="introduction">
+          <img src={Profile[0].src} alt={Profile[0].alt} className="AboutImage " />
+          <div>
+            <p>
+              フルスタックエンジニアになるために日々学習をしている
+              <br />
+              フリーランスエンジニアです。
+            </p>
+            <p>
+              現在はデータベース、REST API 、バッチファイル操作などの
+              <br />
+              バックエンド開発を主に担当しております。
+              <br />
+              他にもフロントエンド開発で使用するReact、TypeScript
+              <br />
+              インフラ系のLinux、AWSなども学習しております。
+            </p>
+          </div>
         </div>
       </div>
-
-      <h2 id="SNS" className="scroll-offset">
-        SNS
-      </h2>
-      <div className="sns-icons">
-        {SnsIcons.map((sns, index) => (
-          <a key={index} href={sns.url} target="_blank" rel="noreferrer">
-            <img src={sns.src} alt={sns.alt} className="icon" />
-          </a>
-        ))}
-      </div>
-    </section>
+    </div>
   );
 };
-
 export default About;

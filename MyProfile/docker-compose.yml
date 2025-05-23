@@ -5,7 +5,7 @@ services:
       - "5173:5173"
     volumes:
       - .:/app
-      - /app/node_modules
+      - /app/node_modules  # 匿名ボリュームでnode_modulesの上書きを防止
     environment:
       - NODE_ENV=development
     command: npm run dev

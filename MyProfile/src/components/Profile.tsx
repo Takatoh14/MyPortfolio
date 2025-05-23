@@ -7,7 +7,7 @@ const iconLists = [...FrontEnd, ...BackEnd, ...Infra, ...Tools, ...CMS, ...Desig
 
 const Profile = () => {
   return (
-    <div className="profile">
+    <div id="Profile" className="profile">
       <div className="inner">
         <h2>Takato Tanabe’s Portfolio</h2>
         <div className="iconsList">

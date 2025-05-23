@@ -1,0 +1,38 @@
+// @useを使うには名前空間付きで変数を使う。
+// 書き方・・・ファイル名.値
+// 例:background-color: variable.$bgColor;
+//// @useに ' as * ' をつけることで名前空間を省略できる。
+
+@use './variable' as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* , *::before , *::after {
+  // inherit・・・親要素の値を引き継ぐ
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: $bgColor;
+  color: $fontColorBlack;
+
+  nav {
+    color: $fontColorGray;
+
+    ul , ol {
+      list-style: none;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}

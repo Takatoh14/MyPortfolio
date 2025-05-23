@@ -1,0 +1,20 @@
+@use './variable' as *;
+
+footer {
+  background-color: $headerBgColor;
+
+  .inner {
+    max-width: $maxWidth;
+    width: 100%;
+    padding-inline: $maxInner;
+    margin:  0 auto;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      font-size: 20px;
+    }
+  }
+}

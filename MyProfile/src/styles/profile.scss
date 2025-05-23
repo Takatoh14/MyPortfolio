@@ -1,0 +1,22 @@
+@use './variable' as *;
+
+.profile {
+  background-color: $profileBgColor;
+  margin-top: 80px;
+
+  .inner {
+    max-width: $maxWidth;
+    width: 100%;
+    padding-inline: $maxInner;
+    margin:  0 auto;
+    h2 {
+      text-align: center;
+      font-size: 6rem;
+      font-weight: 400;
+      padding-block: 90px;
+    }
+    .iconsList {
+      padding-bottom: 90px;
+    }
+  }
+}

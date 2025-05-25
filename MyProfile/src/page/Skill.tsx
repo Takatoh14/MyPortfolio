@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SkillCard from "../components/SkillCard";
 import { Skills } from "../components/Images";
-
+import { useEffect } from "react";
 
 const Skill = () => {
   useEffect(() => {

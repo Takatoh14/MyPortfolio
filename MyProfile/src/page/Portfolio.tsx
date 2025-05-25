@@ -5,7 +5,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PortflioCard from "../components/PortfolioCard";
 import { Profiloes } from "../components/Images";
+import { useEffect } from "react";
 
+// React コンポーネント関数を定義
+const Portfolio = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // ページのトップにスクロール
+  }, []);
   return (
     <div className="wrapper">
       <Header />
@@ -26,4 +32,5 @@ import { Profiloes } from "../components/Images";
   );
 };
 
-export default Portflio;
+// 正しいコンポーネント名で export
+export default Portfolio;

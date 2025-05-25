@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Index from "./page/Index";
-import Project from "./page/Project";
+import Portfolio from "./page/Portfolio";
 import Skill from "./page/Skill";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/Skill" element={<Skill />} />
-        <Route path="/Project" element={<Project />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   );

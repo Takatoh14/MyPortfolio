@@ -1,21 +1,20 @@
 @use './variable' as *;
 
-.profile {
-  margin-block: 80px;
-  background-color: $profileBgColor;
+.skill {
+  margin-top: 80px;
   .inner {
     margin: 0 auto;
-    h2 {
+    .skillTitle {
       padding-block: 80px;
       font-size: 6rem;
-      text-align: center;
       font-weight: 400;
+      text-align: center;
     }
-
-    .iconLists {
+    .skillCards {
       display: flex;
-      gap: 30px;
-      margin-bottom: 80px;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 70px;
     }
   }
 }

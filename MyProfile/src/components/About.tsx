@@ -1,7 +1,7 @@
 import "../styles/common.scss";
 import "../styles/about.scss";
 
-import { Profile } from "./IconList";
+import { Profile } from "./Images";
 
 const About = () => {
   return (
@@ -23,7 +23,7 @@ const About = () => {
               <br />
               他にもフロントエンド開発で使用するReact、TypeScript
               <br />
-              インフラ系のLinux、AWSなども学習しております。
+              なども学習しております。
             </p>
           </div>
         </div>

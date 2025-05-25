@@ -1,4 +1,3 @@
-// 変数ファイル './variable' をインポート（名前空間なしで全ての変数を使用可能に）
 @use './variable' as *;
 
 // スライダーの外枠ラッパー
@@ -6,6 +5,7 @@
   overflow: hidden;     // 中身がはみ出さないように隠す
   width: 100%;          // 横幅いっぱいに広げる
   position: relative;   // 子要素の絶対配置の基準にするため
+  margin-bottom: 80px;
   
   // 実際にスライドするアイコン群のコンテナ
   .icon-slider {
@@ -52,3 +52,14 @@
   }
 }
 
+  .portfolio-slider {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+    // profileIconクラスのアイコン個別スタイル
+    .profileIcon {
+    width: 400px;
+    height: 50px;
+    }
+  }

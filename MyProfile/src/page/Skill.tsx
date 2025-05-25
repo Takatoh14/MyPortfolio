@@ -6,7 +6,11 @@ import Header from "../components/Header";
 import SkillCard from "../components/SkillCard";
 import { Skills } from "../components/Images";
 
+
 const Skill = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // ページのトップにスクロール
+  }, []);
   return (
     <>
       <Header />

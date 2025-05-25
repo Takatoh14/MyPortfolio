@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import PortflioCard from "../components/PortfolioCard";
 import { Profiloes } from "../components/Images";
 
-const Portflio = () => {
   return (
     <div className="wrapper">
       <Header />

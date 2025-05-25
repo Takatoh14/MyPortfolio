@@ -1,0 +1,59 @@
+@use './variable' as *;
+
+.skillCard {
+  width: 270px;
+  height: 350px;
+  border: solid 3px $fontColorGray;
+  border-radius: 10px;
+
+  .skillCardIcons {
+    width: 100px;
+    margin: 0 auto;
+
+    .skillCard_icon {
+    width: 100px;
+    height: 100px;
+    margin-block: 30px 20px;
+    }
+  }
+
+    .skillCard_title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px; // テキストからの距離
+      width: 230px;
+      height: 4px;
+      background-color: $fontColorGray; // SCSS変数の色を使用
+      border-radius: 50px;
+    }
+  }
+
+  .skillCard_level {
+    margin-block: 3rem 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    .star {
+      font-size: 1.5rem;
+      margin-right: 2px;
+      color: $starColorGray; // デフォルトは灰色
+
+      &.filled {
+        color: $starColorOrange; // スキルあり → 色付き
+      }
+    }
+  }
+  
+  .skillCard_text {
+    width: 170px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+}

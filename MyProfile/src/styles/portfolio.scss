@@ -1,0 +1,37 @@
+@use './variable' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1; // フッターを下に押し下げる余白確保
+
+    .skill {
+      margin-top: 80px;
+      .inner {
+        margin: 0 auto;
+        .skillTitle {
+          padding-block: 80px;
+          font-size: 6rem;
+          font-weight: 400;
+          text-align: center;
+        }
+        .skillCards {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+}
+

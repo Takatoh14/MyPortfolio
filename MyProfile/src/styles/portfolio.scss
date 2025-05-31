@@ -19,19 +19,27 @@
           text-align: center;
         }
         .skillCards {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap;
-        margin-bottom: 70px;
+          display: flex;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-bottom: 70px;
+        }
       }
     }
   }
 }
 
-footer {
-  margin-top: auto;
+@media screen and (max-width:768px) {
+  .wrapper{
+    main {
+      .skill{
+        .inner{
+          .skillTitle {
+            font-size: 4rem;
+            padding-block: 4rem;
+          }
+        }
+      }
+    }
+  }
 }
-
-
-}
-

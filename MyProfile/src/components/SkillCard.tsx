@@ -1,5 +1,5 @@
-import "../styles/common.scss";
 import "../styles/skillCard.scss";
+import "../styles/common.scss";
 
 import type { IconData } from "../components/Images";
 

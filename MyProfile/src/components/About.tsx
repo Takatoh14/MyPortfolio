@@ -1,5 +1,5 @@
-import "../styles/common.scss";
 import "../styles/about.scss";
+import "../styles/common.scss";
 
 import { Profile } from "./Images";
 

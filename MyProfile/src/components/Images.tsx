@@ -111,7 +111,7 @@ const Others = [
     src: Profile01,
     alt: "ポートフォリオサイト",
     description: "React、TypeScriptを使用して作成したポートフォリオサイトです。自己紹介やスキル、成果物などを掲載しています。",
-    url: "http://localhost:5173/",
+    url: "/",
   },
   // 今後追加可能
 ];

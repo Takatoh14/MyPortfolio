@@ -1,5 +1,5 @@
-import "../styles/common.scss";
 import "../styles/profile.scss";
+import "../styles/common.scss";
 
 import { Backend, CMS, Design, Frontend, Infra, Tool } from "../components/Images";
 

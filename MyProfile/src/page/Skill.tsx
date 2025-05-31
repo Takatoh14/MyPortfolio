@@ -1,5 +1,5 @@
-import "../styles/common.scss";
 import "../styles/skill.scss";
+import "../styles/common.scss";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";

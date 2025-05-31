@@ -10,12 +10,31 @@
       font-size: 6rem;
       text-align: center;
       font-weight: 400;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .iconLists {
       display: flex;
       gap: 30px;
       margin-bottom: 80px;
+      padding-inline: $maxInner;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .profile {
+    margin-bottom: 40px;
+    .inner {
+      h2 {
+        font-size: 4rem;
+      }
+
+      .iconLists {
+        padding-inline: $minInner;
+        margin-bottom: 40px;
+      }
     }
   }
 }

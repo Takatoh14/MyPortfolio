@@ -1,4 +1,5 @@
 import "../styles/iconList.scss";
+import "../styles/common.scss";
 
 import type { IconListProps } from "./Images";
 

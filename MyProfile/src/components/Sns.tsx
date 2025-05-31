@@ -1,4 +1,5 @@
 import "../styles/sns.scss";
+import "../styles/common.scss";
 
 import IconList from "./IconList";
 import { SNS } from "./Images";

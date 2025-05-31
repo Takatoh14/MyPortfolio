@@ -3,7 +3,9 @@
 // スライダーの外枠ラッパー
 .icon-slider-wrapper {
   overflow: hidden;     // 中身がはみ出さないように隠す
+  max-width: 1200px;
   width: 100%;          // 横幅いっぱいに広げる
+  margin: 0 auto;
   position: relative;   // 子要素の絶対配置の基準にするため
   margin-bottom: 80px;
   
@@ -61,5 +63,11 @@
     .profileIcon {
     width: 400px;
     height: 50px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .snsIcons {
+      gap: 50px;
     }
   }

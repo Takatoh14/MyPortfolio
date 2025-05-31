@@ -12,9 +12,25 @@
     }
     .skillCards {
       display: flex;
-      gap: 40px;
+      gap: 20px;
       flex-wrap: wrap;
       margin-bottom: 70px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 30px;
     }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .skillCards {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .skill .inner .skillTitle {
+    font-size: 4rem;
+    padding-block: 4rem;
   }
 }

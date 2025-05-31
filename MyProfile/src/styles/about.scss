@@ -33,6 +33,45 @@
         margin-top: 40px;
       }
     }
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .about {
+    margin-top: 40px;
+    .inner {
+      padding-inline: $minInner;
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .introduction {
+        flex-flow: column;
+        align-items: center;
+
+        .AboutImage {
+          width: 200px;
+          height: 200px;
+        }
+
+        p {
+          font-size: 1.5rem;
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:452px) {
+  .about {
+    .inner {
+      .introduction {
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
   }
 }

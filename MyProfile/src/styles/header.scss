@@ -5,16 +5,20 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 
   .inner {
     margin: 0 auto;
 
     .headerFlex {
-        height: 80px;
+      height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-inline: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      
 
       .headerImage {
         width: 50px;
@@ -22,36 +26,171 @@
         border-radius: 50%;
       }
 
-      nav {
+      // デスクトップ用ナビゲーション
+      .navMenu {
         ul {
           display: flex;
           gap: 30px;
 
           li {
             position: relative;
-            color: $fontColorBlack;
-            font-weight: 400;
             font-size: 2rem;
 
-            // 擬似要素で下線を作成する
-            &::after {
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              height: 2px;
-              width: 100%;
-              background-color: $fontColorBlack;
-              transform: scaleX(0); //ホバー時以外は非表示
-              transform-origin: left; //左側を起点とする
-              transition: transform 0.3s ease; //アニメーションの設定
-            }
-            &:hover::after {
-              transform: scaleX(1); //ホバー時に表示させる
+            a {
+              color: $fontColorBlack;
+              text-decoration: none;
+
+              &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 100%;
+                background-color: $fontColorBlack;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
             }
           }
         }
       }
+
+      // ハンバーガーメニュー（三本線）
+      .hamburger {
+        position: relative;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 110;
+        display: none;
+
+        // 三本線の見た目（中央線、上、下）
+        span,
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background-color: $fontColorBlack;
+          transition: all 0.3s ease;
+          left: 0;
+        }
+
+        span {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          bottom: 0;
+        }
+
+        // メニューが開いたときの変形（×マーク）
+        &.open {
+          span {
+            opacity: 0;
+          }
+
+          &::before {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+          }
+
+          &::after {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+          }
+        }
+      }
     }
+  }
+}
+
+// モバイルメニュー
+.mobile-nav {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 50vh;
+  background-color: $headerBgColor;
+  z-index: 99;
+  transition: top 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      margin: 1.5rem 0;
+
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $fontColorBlack;
+        position: relative;
+
+        // 下線（モバイルでも表示対応）
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $fontColorBlack;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.show {
+    top: 0;
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 768px) {
+  .header {
+    .inner {
+      .headerFlex {
+        padding-inline: $minInner;
+        .navMenu {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-nav {
+    display: none;
   }
 }

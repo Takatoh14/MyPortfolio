@@ -1,7 +1,6 @@
 //画像、アイコン読み込み
 import AWSIcon from "../../public/images/aws.svg";
 import AiIcon from "../../public/images/adobe-illustrator.svg";
-import BootstrapIcon from "../../public/images/Bootstrap.svg";
 import CssIcon from "../../public/images/css.svg";
 import DockerIcon from "../../public/images/docker.svg";
 import GitHubIcon from "../../public/images/github.svg";
@@ -57,7 +56,6 @@ const Frontend = [
   { src: JsIcon, alt: "JavaScript", level: 2, description: "独学で現在学習中。簡単なアニメーションなどの実装ができる。" },
   { src: TsIcon, alt: "TypeScript", level: 2, description: "独学で現在学習中。このサイトにも使用している。" },
   { src: ReactIcon, alt: "React", level: 2, description: "独学で現在学習中。このサイトにも使用している。" },
-  { src: BootstrapIcon, alt: "Bootstrap", level: 2, description: "独学で学習。CSSのフレームワークで基本的なことはできる。" },
   { src: NextIcon, alt: "Next", level: 1, description: "独学で現在学習中。Reactのフレームワークであまり理解ができていない。" },
   { src: JqueryIcon, alt: "Jquery", level: 2, description: "独学で学習。JavaScriptのフレームワーク。現在はあまり使用していない。" },
   { src: SassIcon, alt: "SASS", level: 3, description: "独学で学習。CSSを拡張したメタ言語でこのサイトにも使用している。" },

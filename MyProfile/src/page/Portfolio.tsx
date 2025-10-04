@@ -1,11 +1,11 @@
-import "../styles/common.scss";
-import "../styles/portfolio.scss";
+import '../styles/common.scss';
+import '../styles/portfolio.scss';
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import PortflioCard from "../components/PortfolioCard";
-import { Profiloes } from "../components/Images";
-import { useEffect } from "react";
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import PortflioCard from '../components/PortfolioCard';
+import { Profiloes } from '../components/Images';
+import { useEffect } from 'react';
 
 // React コンポーネント関数を定義
 const Portfolio = () => {
@@ -21,7 +21,13 @@ const Portfolio = () => {
             <h2 className="skillTitle">Portfolio</h2>
             <div className="skillCards">
               {Profiloes.map((item, index) => (
-                <PortflioCard key={index} icon={item.src} title={item.alt} description={item.description} url={item.url} />
+                <PortflioCard
+                  key={index}
+                  icon={item.src}
+                  title={item.alt}
+                  description={item.description}
+                  url={item.url}
+                />
               ))}
             </div>
           </div>

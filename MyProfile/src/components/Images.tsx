@@ -1,34 +1,35 @@
-//画像、アイコン読み込み
-import AWSIcon from '../../public/images/aws.svg';
-import AiIcon from '../../public/images/adobe-illustrator.svg';
-import CssIcon from '../../public/images/css.svg';
-import DockerIcon from '../../public/images/docker.svg';
-import GitHubIcon from '../../public/images/github.svg';
-import GitIcon from '../../public/images/git.svg';
-import HtmlIcon from '../../public/images/html.svg';
-import InstagramIcon from '../../public/images/instagram.svg';
-import JqueryIcon from '../../public/images/jquery.svg';
-import JsIcon from '../../public/images/javascript.svg';
-import LaravelIcon from '../../public/images/laravel.svg';
-import LinuxIcon from '../../public/images/linux.svg';
-import MysqlIcon from '../../public/images/mysql.svg';
-import NPMIcon from '../../public/images/npm.svg';
-import NextIcon from '../../public/images/nextjs.svg';
-//import NoImageIcon from "../../public/images/no-image.svg";
-import NodeIcon from '../../public/images/nodejs.svg';
-import PHPicon from '../../public/images/php.svg';
-//import Profile01 from "../../public/images/Portfolio.png";
-import Profile01 from '../../public/images/MyPortfolio.png';
-import Profile02 from '../../public/images/tools.png';
-import ProfileImage from '../../public/images/icon01.png';
-import PsIcon from '../../public/images/adobe-photoshop.svg';
-import ReactIcon from '../../public/images/reactjs.svg';
-import SassIcon from '../../public/images/sass.svg';
-import SsmsIcon from '../../public/images/ssms.svg';
-import TsIcon from '../../public/images/typescript.svg';
-import WPIcon from '../../public/images/wordpress.svg';
-import XIcon from '../../public/images/X.svg';
-import XdIcon from '../../public/images/adobe-xd.svg';
+//画像、アイコン読み込み(publicディレクトリの画像はルートパスの文字列で参照する)
+const AWSIcon = "/images/aws.svg";
+const AiIcon = "/images/adobe-illustrator.svg";
+const CssIcon = "/images/css.svg";
+const DockerIcon = "/images/docker.svg";
+const GitHubIcon = "/images/github.svg";
+const GitIcon = "/images/git.svg";
+const HtmlIcon = "/images/html.svg";
+const InstagramIcon = "/images/instagram.svg";
+const JqueryIcon = "/images/jquery.svg";
+const JsIcon = "/images/javascript.svg";
+const LaravelIcon = "/images/laravel.svg";
+const LinuxIcon = "/images/linux.svg";
+const MysqlIcon = "/images/mysql.svg";
+const NPMIcon = "/images/npm.svg";
+const NextIcon = "/images/nextjs.svg";
+//const NoImageIcon = "/images/no-image.svg";
+const NodeIcon = "/images/nodejs.svg";
+const PHPicon = "/images/php.svg";
+//const Profile01 = "/images/Portfolio.png";
+const Profile01 = "/images/MyPortfolio.png";
+const Profile02 = "/images/tools.png";
+const LittleStore = "/images/LittleStore.png";
+const ProfileImage = "/images/icon01.png";
+const PsIcon = "/images/adobe-photoshop.svg";
+const ReactIcon = "/images/reactjs.svg";
+const SassIcon = "/images/sass.svg";
+const SsmsIcon = "/images/ssms.svg";
+const TsIcon = "/images/typescript.svg";
+const WPIcon = "/images/wordpress.svg";
+const XIcon = "/images/X.svg";
+const XdIcon = "/images/adobe-xd.svg";
 
 //型定義
 export type IconData = {
@@ -55,54 +56,54 @@ export type IconListProps = {
 const Frontend = [
   {
     src: HtmlIcon,
-    alt: 'HTML',
+    alt: "HTML",
     level: 4,
-    description: '独学で学習。基本的なことはできる。',
+    description: "独学で学習。基本的なことはできる。",
   },
   {
     src: CssIcon,
-    alt: 'CSS',
+    alt: "CSS",
     level: 4,
-    description: '独学で学習。基本的なことはできる。',
+    description: "独学で学習。基本的なことはできる。",
   },
   {
     src: JsIcon,
-    alt: 'JavaScript',
+    alt: "JavaScript",
     level: 2,
-    description: '独学で現在学習中。簡単なアニメーションなどの実装ができる。',
+    description: "独学で現在学習中。簡単なアニメーションなどの実装ができる。",
   },
   {
     src: TsIcon,
-    alt: 'TypeScript',
+    alt: "TypeScript",
     level: 2,
-    description: '独学で現在学習中。このサイトにも使用している。',
+    description: "独学で現在学習中。このサイトにも使用している。",
   },
   {
     src: ReactIcon,
-    alt: 'React',
+    alt: "React",
     level: 2,
-    description: '独学で現在学習中。このサイトにも使用している。',
+    description: "独学で現在学習中。このサイトにも使用している。",
   },
   {
     src: NextIcon,
-    alt: 'Next',
+    alt: "Next",
     level: 1,
     description:
-      '独学で現在学習中。Reactのフレームワークであまり理解ができていない。',
+      "独学で現在学習中。Reactのフレームワークであまり理解ができていない。",
   },
   {
     src: JqueryIcon,
-    alt: 'Jquery',
+    alt: "Jquery",
     level: 2,
     description:
-      '独学で学習。JavaScriptのフレームワーク。現在はあまり使用していない。',
+      "独学で学習。JavaScriptのフレームワーク。現在はあまり使用していない。",
   },
   {
     src: SassIcon,
-    alt: 'SASS',
+    alt: "SASS",
     level: 3,
     description:
-      '独学で学習。CSSを拡張したメタ言語でこのサイトにも使用している。',
+      "独学で学習。CSSを拡張したメタ言語でこのサイトにも使用している。",
   },
 ];
 
@@ -110,34 +111,34 @@ const Frontend = [
 const Backend = [
   {
     src: PHPicon,
-    alt: 'PHP',
+    alt: "PHP",
     level: 3,
-    description: '独学で学習。基本的なことはできる。',
+    description: "独学で学習。基本的なことはできる。",
   },
   {
     src: LaravelIcon,
-    alt: 'Laravel',
+    alt: "Laravel",
     level: 3,
-    description: '独学で学習。PHPのフレームワークで基本的なことはできる。',
+    description: "独学で学習。PHPのフレームワークで基本的なことはできる。",
   },
   {
     src: NodeIcon,
-    alt: 'Node',
+    alt: "Node",
     level: 1,
     description:
-      '独学で現在学習中。サーバーサイドでJavaScriptを使うためのプラットフォームであまり理解ができていない。',
+      "独学で現在学習中。サーバーサイドでJavaScriptを使うためのプラットフォームであまり理解ができていない。",
   },
   {
     src: MysqlIcon,
-    alt: 'Mysql',
+    alt: "Mysql",
     level: 4,
-    description: '独学で学習。基礎的な操作ができる。',
+    description: "独学で学習。基礎的な操作ができる。",
   },
   {
     src: SsmsIcon,
-    alt: 'SSMS',
+    alt: "SSMS",
     level: 4,
-    description: '独学で学習。基礎的な操作ができる。',
+    description: "独学で学習。基礎的な操作ができる。",
   },
 ];
 
@@ -145,43 +146,43 @@ const Backend = [
 const Infra = [
   {
     src: AWSIcon,
-    alt: 'AWS',
+    alt: "AWS",
     level: 1,
-    description: 'クラウドサービス。あまり理解ができていない。',
+    description: "クラウドサービス。あまり理解ができていない。",
   },
   {
     src: DockerIcon,
-    alt: 'Docker',
+    alt: "Docker",
     level: 1,
-    description: 'コンテナ仮想化ツール。少しだけ操作ができる程度。',
+    description: "コンテナ仮想化ツール。少しだけ操作ができる程度。",
   },
   {
     src: LinuxIcon,
-    alt: 'Linux',
+    alt: "Linux",
     level: 1,
-    description: '基本的なコマンド操作ができる程度。',
+    description: "基本的なコマンド操作ができる程度。",
   },
 ];
 
 const Tool = [
   {
     src: GitIcon,
-    alt: 'Git',
+    alt: "Git",
     level: 3,
-    description: 'バージョン管理ツール。基本的なコマンド操作ができる程度。',
+    description: "バージョン管理ツール。基本的なコマンド操作ができる程度。",
   },
   {
     src: GitHubIcon,
-    alt: 'GitHub',
+    alt: "GitHub",
     level: 3,
-    description: 'バージョン管理ツール。基本的なコマンド操作ができる程度。',
+    description: "バージョン管理ツール。基本的なコマンド操作ができる程度。",
   },
   {
     src: NPMIcon,
-    alt: 'npm',
+    alt: "npm",
     level: 1,
     description:
-      'Node.jsのパッケージ管理システム。簡単なコマンド操作ができる程度。',
+      "Node.jsのパッケージ管理システム。簡単なコマンド操作ができる程度。",
   },
 ];
 
@@ -189,10 +190,10 @@ const Tool = [
 const CMS = [
   {
     src: WPIcon,
-    alt: 'WordPress',
+    alt: "WordPress",
     level: 1,
     description:
-      'Webサイトやブログを簡単に作成・管理できるコンテンツ管理システム。あまり理解ができていない。',
+      "Webサイトやブログを簡単に作成・管理できるコンテンツ管理システム。あまり理解ができていない。",
   },
 ];
 
@@ -200,54 +201,60 @@ const CMS = [
 const Design = [
   {
     src: AiIcon,
-    alt: 'Illustrator',
+    alt: "Illustrator",
     level: 2,
     description:
-      'テキストと画像を組み合わせたレイアウトの作成ができる。簡単な操作ができる程度',
+      "テキストと画像を組み合わせたレイアウトの作成ができる。簡単な操作ができる程度",
   },
   {
     src: PsIcon,
-    alt: 'Photoshop',
+    alt: "Photoshop",
     level: 1,
-    description: '画像編集ソフト。あまり理解ができていない。',
+    description: "画像編集ソフト。あまり理解ができていない。",
   },
   {
     src: XdIcon,
-    alt: 'Xd',
+    alt: "Xd",
     level: 2,
-    description: 'UI/UXデザインに特化したツール。簡単な操作ができる程度。',
+    description: "UI/UXデザインに特化したツール。簡単な操作ができる程度。",
   },
 ];
 
 //プロフィール画像
-const Profile = [{ src: ProfileImage, alt: 'Profile' }];
+const Profile = [{ src: ProfileImage, alt: "Profile" }];
 
 //SNS
 const SNS = [
-  { src: GitHubIcon, alt: 'GitHUb', url: 'https://github.com/Takatoh14' },
+  { src: GitHubIcon, alt: "GitHUb", url: "https://github.com/Takatoh14" },
   {
     src: InstagramIcon,
-    alt: 'Instagram',
-    url: 'https://www.instagram.com/t.takato523/',
+    alt: "Instagram",
+    url: "https://www.instagram.com/t.takato523/",
   },
-  { src: XIcon, alt: 'X', url: 'https://x.com/takato_H14' },
+  { src: XIcon, alt: "X", url: "https://x.com/takato_H14" },
 ];
 
 //その他
 const Others = [
   {
     src: Profile01,
-    alt: 'ポートフォリオサイト',
+    alt: "ポートフォリオサイト",
     description:
-      'React、TypeScriptを使用して作成したポートフォリオサイトです。自己紹介やスキル、成果物などを掲載しています。',
-    url: '/',
+      "React、TypeScriptを使用して作成したポートフォリオサイトです。自己紹介やスキル、成果物などを掲載しています。",
+    url: "/",
   },
   {
     src: Profile02,
-    alt: 'データ変換サイト',
+    alt: "データ変換サイト",
     description:
-      'React、TypeScriptを使用して作成したデータ変換サイトです。データ置換やデータの差分確認、Json整形などが行えます。',
-    url: '/tools',
+      "React、TypeScriptを使用して作成したデータ変換サイトです。データ置換やデータの差分確認、Json整形などが行えます。",
+    url: "/tools",
+  },
+  {
+    src: LittleStore,
+    alt: "文房具ECサイト",
+    description: "文房具販売サイト",
+    url: "https://github.com/Takatoh14/little-store.git",
   },
   // 今後追加可能
 ];
